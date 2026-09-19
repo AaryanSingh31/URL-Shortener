@@ -12,10 +12,7 @@ async function handleGenNewShortUrl(req, res){
         redirectUrl : body.url,
         visitHistory : []
     });
-
-    return res.json({
-        id : shortId
-    })
+    return res.render('home', {id: shortId}); //shortId is passed to the home.ejs file to render it
 }
 
 //Handle redirecting
