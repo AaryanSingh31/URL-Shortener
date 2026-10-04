@@ -9,4 +9,14 @@ router.get('/', async (req, res) => {
     res.render('Home', {urls : allUrls}); //we are passing the urls to the Home.ejs file to render it
 });
 
+//Signup page route
+router.get('/signup', (req, res) => {
+    res.render('signup'); //this will call the signup.ejs file and render it to the UI
+});
+
+//login page route
+router.get('/login', (req, res) => {
+    res.render('login'); //this will call the login.ejs file and render it to the UI
+});
+
 module.exports = router;
