@@ -9,7 +9,7 @@ const urlRoute = require('./routes/url'); // Short URL generate karne ke routes
 const { checkAuth, restrictAuth } = require('./middlewares/auth'); // Auth checking and route protecting middlewares
 
 const app = express(); // Express app ka instance banaya
-const PORT = 4001; // Server chalane ke liye port number assign kiya
+const PORT = 8000; // Server chalane ke liye port number assign kiya
 
 connectToMongoDB('mongodb://localhost:27017/short-url').then(() => console.log("MongoDB connected")); // DB se connect kiya
 app.set('view engine', 'ejs'); // Template engine EJS set kiya
